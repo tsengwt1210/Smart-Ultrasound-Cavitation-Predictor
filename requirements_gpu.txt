@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------
+# requirements_gpu.txt
+# For machines WITH an NVIDIA GPU (CUDA 11.8)
+# Python Environment: 3.9
+# -----------------------------------------------------------------
+
+# -- PyTorch (R-CNN Model) --
+# This index-url points to the PyTorch build compiled for CUDA 11.8
+--index-url https://download.pytorch.org/whl/cu118
+torch==2.0.1
+torchvision==0.15.2
+
+# -- Core Dependencies (OpenCV & Numpy) --
+numpy==1.24.4
+opencv-python==4.8.0.76
+
+# -----------------------------------------------------------------
+# To install, run:
+# pip install -r requirements_gpu.txt
+# -----------------------------------------------------------------
