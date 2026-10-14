@@ -84,9 +84,19 @@ results = demo_bpnn();
 
 ## 團隊介面畫面
 
-下圖沿用本庫原有的公開操作畫面；GUI 原始檔與功能對應見 [GUI 說明](docs/GUI.md)。
+以下使用專題報告中較新版介面的原始 PNG，點開圖片可查看完整解析度。圖片展示當時的操作結果；目前公開的 `.mlapp` 為較早版本，MedSAM 對應的程式與權重尚未包含在本庫。版本與操作說明見 [GUI 說明](docs/GUI.md)。
 
-<img width="620" alt="專題 MATLAB GUI 既有操作畫面" src="https://github.com/user-attachments/assets/c5618f75-8df7-4453-ad0a-87db51e6dd56" />
+**U-Net：原圖、分割遮罩與面積顯示**
+
+![U-Net 較新版介面：左側原圖，右側分割遮罩，下方顯示面積與信心分數](assets/screenshots/unet-segmentation.png)
+
+**Mask R-CNN：輪廓與個別區域分析**
+
+![Mask R-CNN 較新版介面：原圖與藍色預測輪廓，下方顯示面積與信心分數](assets/screenshots/mask-rcnn-analysis.png)
+
+**MedSAM：提示框與分割結果**
+
+![MedSAM 後續整合介面：左側紅色提示框，右側分割遮罩](assets/screenshots/medsam-segmentation.png)
 
 ## 文件與使用範圍
 
