@@ -5,10 +5,10 @@
 # -----------------------------------------------------------------
 
 # -- PyTorch (R-CNN Model) --
-# This index-url points to the PyTorch build compiled for CUDA 11.8
---index-url https://download.pytorch.org/whl/cu118
-torch==2.0.1
-torchvision==0.15.2
+# Add the CUDA 11.8 index while retaining PyPI for NumPy and OpenCV.
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
 
 # -- Core Dependencies (OpenCV & Numpy) --
 numpy==1.24.4

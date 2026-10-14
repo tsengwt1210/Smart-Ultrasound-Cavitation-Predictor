@@ -8,7 +8,12 @@ from torchvision.transforms import functional as F
 
 
 def load_model(model_path, device, num_classes=2):
-    model = maskrcnn_resnet50_fpn(num_classes=num_classes)
+    if not os.path.isfile(model_path):
+        raise FileNotFoundError(f"Cannot find model checkpoint: {model_path}")
+    # The supplied checkpoint contains all weights; do not download a backbone.
+    model = maskrcnn_resnet50_fpn(
+        weights=None, weights_backbone=None, num_classes=num_classes
+    )
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.to(device)
     model.eval()
@@ -64,7 +69,7 @@ def predict_image(model, device, image_path, threshold=0.6, output_path=None):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python f2_predict.py <model_path> <image_path> <output_path>")
+        print("Usage: python rcnn_predict.py <model_path> <image_path> <output_path>")
         sys.exit(1)
 
 

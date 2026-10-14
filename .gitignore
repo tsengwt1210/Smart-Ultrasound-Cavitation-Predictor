@@ -1,0 +1,36 @@
+# MATLAB temporary files and generated outputs
+*.asv
+*.autosave
+slprj/
+codegen/
+*.mex*
+matlab_pref*/
+dataset/
+data/images/
+data/annotations/
+results/
+outputs/
+screenshot_*.png
+result_*.png
+
+# Keep existing tracked models/data; avoid accidentally adding new raw assets.
+*.mat
+*.pth
+*.pt
+*.onnx
+*.xlsx
+*.csv
+*.zip
+*.mlappinstall
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.env
+.env.*
+Thumbs.db
+.DS_Store

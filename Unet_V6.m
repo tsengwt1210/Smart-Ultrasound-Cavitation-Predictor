@@ -1,15 +1,16 @@
 %% ==== U-Net 全流程訓練與圈選腳本 v5.4 (最終功能整合版) ====
 % 版本說明：
 % v5.4: 根據 v5.2 的優點進行最終整合，並修復錯誤。
-%       1. [修復] 將 semanticseg 替換為 predict，解決 "Undefined function" 錯誤，不再依賴 Computer Vision Toolbox。
+%       1. [修復] 將 semanticseg 替換為 predict；標註與 pixelLabel datastore 仍需 Computer Vision Toolbox。
 %       2. [整合] 加入 v5.2 的所有優點：信心分數計算、bwareaopen 預濾波、強化的單張分析、專業版 FFT、進度條等。
 % v5.3: 將特徵提取從空間域 (cycles/um) 全面改回時間域 (Hz)。
 
 clear; clc; close all;
 %% ===== Step 1: 全域參數設定 =====
-gTruthPath_default = 'D:\專題\U-net\scripts\v3table_rebuilt.mat'; % 預設 gTruth 檔案路徑
-imageFolderPath = 'D:\專題\U-net\images_2';       % 包含所有原始圖片的資料夾
-maskFolderPath = 'D:\專題\U-net\masks\V6';    % 儲存產生出來的 mask 與結果圖
+repoDir = fileparts(mfilename('fullpath'));
+gTruthPath_default = fullfile(repoDir, 'data', 'annotations', 'gTruth.mat');
+imageFolderPath = fullfile(repoDir, 'data', 'images'); % 需自行提供原始顯微鏡影像
+maskFolderPath = fullfile(repoDir, 'outputs', 'unet_masks'); % 產生的遮罩與結果
 pixelSize_sq_um = 1 * 1; % 【重要】每像素代表的實際"面積" (例如 0.5um * 0.5um = 0.25)。
 minAreaThreshold_px = 30000; % 面積計算時，小於此像素數的物件將被過濾
 morphologyRadius = 15; % 形態學閉運算的半徑

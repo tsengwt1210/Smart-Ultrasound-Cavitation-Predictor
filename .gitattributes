@@ -1,0 +1,5 @@
+* whitespace=cr-at-eol
+*.md text eol=lf
+*.mat binary
+*.mlapp binary
+*.xlsx binary

@@ -1,0 +1,7 @@
+# Historical Python 3.9 environment for the optional Mask R-CNN module.
+# This dependency set has not been reinstalled as part of the documentation update.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
+numpy==1.24.4
+opencv-python==4.8.0.76
