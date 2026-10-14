@@ -1,4 +1,4 @@
-# 智慧超音波空穴預測系統
+# 結合多模態神經網路與仿生材料之超音波醫美治療成效預測系統
 
 **Smart Ultrasound Cavitation Predictor** 是將測試片的顯微鏡影像轉換成面積資料，再用頻譜特徵預測空穴面積的大學專題。系統結合手動量測、U-Net、Mask R-CNN 與 BPNN，透過 MATLAB 介面操作。
 
