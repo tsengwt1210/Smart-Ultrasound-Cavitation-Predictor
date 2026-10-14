@@ -63,9 +63,8 @@ results = demo_bpnn();
 | [`rcnn_predict.py`](rcnn_predict.py) | 團隊 Mask R-CNN 的 Python 推論接口；權重需另備 |
 | [`Unet_V6.m`](Unet_V6.m) | 專題保留的 U-Net 腳本快照；版本整理以 [BioUS-Net](https://github.com/tsengwt1210/BioUS-Net) 為主 |
 
-## 我的工作與團隊分工
+## 團隊分工
 
-我主要負責手動框選面積量測程式、獨立 U-Net 流程、BPNN 訓練與分析，以及後續 MedSAM 導入與自動化。我也規劃介面版面、操作選項及 MATLAB／Python 的串接流程，將模組交給 GUI 組員整合。
 
 | 成員 | 主要工作 |
 | --- | --- |
